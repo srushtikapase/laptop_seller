@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Laptop Inventory Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .paddsection {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cart-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cart-img img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .cart-img img:hover {
+            transform: scale(1.05);
+        }
+        .cart-info {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .cart-info h3 {
+            margin: 0;
+            color: #2980b9;
+        }
+        .cart-info p {
+            margin: 5px 0;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        .btn-primary {
+            background-color: #2980b9;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1a5276;
+        }
+        .text-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Start Cart Section -->
+    <div class="paddsection">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Cart</h2>
+                <p>Purchased Laptops</p>
+            </div>
+            <div class="row">
+                <!-- Laptop 1 -->
+                <div class="col-md-4">
+                    <div class="cart-item">
+                        <div class="cart-img">
+                            <img src="images/laptop1.jpg" alt="Laptop 1">
+                        </div>
+                        <div class="cart-info">
+                            <h3>MacBook Pro</h3>
+                            <p>Brand: Apple</p>
+                            <p>Price: ₹1999</p>
+                            <button class="btn btn-danger" onclick="removeFromCart('MacBook Pro')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Laptop 2 -->
+                <div class="col-md-4">
+                    <div class="cart-item">
+                        <div class="cart-img">
+                            <img src="images/laptop2.jpg" alt="Laptop 2">
+                        </div>
+                        <div class="cart-info">
+                            <h3>Dell XPS 13</h3>
+                            <p>Brand: Dell</p>
+                            <p>Price: ₹1499</p>
+                            <button class="btn btn-danger" onclick="removeFromCart('Dell XPS 13')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Laptop 3 -->
+                <div class="col-md-4">
+                    <div class="cart-item">
+                        <div class="cart-img">
+                            <img src="images/laptop3.jpg" alt="Laptop 3">
+                        </div>
+                        <div class="cart-info">
+                            <h3>HP Spectre x360</h3>
+                            <p>Brand: HP</p>
+                            <p>Price: ₹1399</p>
+                            <button class="btn btn-danger" onclick="removeFromCart('HP Spectre x360')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Checkout Button -->
+            <div class="text-center mt-4">
+                <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Cart Section -->
+
+    <script>
+      function removeFromCart(itemName) {
+        alert(itemName + ' has been removed from your cart.');
+        // Additional logic to handle cart updates can be added here
+      }
+    </script>
+
+</body>
+</html>
